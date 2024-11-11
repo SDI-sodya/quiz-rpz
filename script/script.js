@@ -115,6 +115,18 @@ document.addEventListener('DOMContentLoaded', function () {
       formAnswers.innerHTML = '';
       questionTitle.textContent = `${questions[indexQuestion].question}`;
       
+      if (numberQuestion === 0) {
+        prevButton.style.display = 'none';
+      } else {
+        prevButton.style.display = 'block';
+      }
+
+      if (numberQuestion === questions.length - 1) {
+        nextButton.style.display = 'none';
+      } else {
+        nextButton.style.display = 'block';
+      }
+
       renderAnswers(indexQuestion);
     };
     renderQuestions(numberQuestion);
